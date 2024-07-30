@@ -1,0 +1,54 @@
+serverless create --template aws-nodejs --path email-service
+cd email-service
+
+
+(node:5968) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+✖ Configuration file not found in directory "/Users/mohdumair"
+
+mohdumair@Umairs-MacBook-Air email-service % cd ~/email-service
+
+mohdumair@Umairs-MacBook-Air email-service % ls
+
+serverless.yml		serverless.yml.save
+mohdumair@Umairs-MacBook-Air email-service % handler.js  node_modules  package.json  serverless.yml
+
+zsh: command not found: handler.js
+mohdumair@Umairs-MacBook-Air email-service % cd ~
+
+mohdumair@Umairs-MacBook-Air ~ % mkdir email-service
+cd email-service
+
+mkdir: email-service: File exists
+mohdumair@Umairs-MacBook-Air email-service % touch serverless.yml
+nano serverless.yml
+
+mohdumair@Umairs-MacBook-Air email-service % touch handler.js
+nano handler.js
+
+mohdumair@Umairs-MacBook-Air email-service % npm install serverless-offline aws-sdk
+
+npm warn deprecated superagent@7.1.6: Please upgrade to v9.0.0+ as we have fixed a public vulnerability with formidable dependency. Note that v9.0.0+ requires Node.js v14.18.0+. See https://github.com/ladjs/superagent/pull/1800 for insight. This project is supported and maintained by the team at Forward Email @ https://forwardemail.net
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+npm warn deprecated querystring@0.2.1: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+
+added 676 packages in 2m
+
+139 packages are looking for funding
+  run `npm fund` for details
+mohdumair@Umairs-MacBook-Air email-service % serverless offline
+
+
+(node:6459) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+? Serverless Framework V4 CLI is free for developers and organizations making less than $2 million annually, but requires an account or a license key.
+✖ Serverless Framework V4 CLI is free for developers and organizations making less than $2 million annually, but requires an account or a license key.
+
+Please login/register or enter your license key: · 
+
+✖ Authentication canceled
+
+mohdumair@Umairs-MacBook-Air email-service % 
